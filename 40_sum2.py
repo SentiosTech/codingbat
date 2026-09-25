@@ -1,0 +1,29 @@
+"""
+Given an array of ints, return the sum of the first 2 elements in the array. If the array length is less than 2, just sum up the elements that exist, returning 0 if the array is length 0.
+
+sum2([1, 2, 3]) → 3
+sum2([1, 1]) → 2
+sum2([1, 1, 1, 1]) → 2
+"""
+
+
+# normal
+def sum2(nums):
+    count = 0
+    for num in nums[:2]:
+        count += num
+    return count
+
+def sum2(nums):
+    return sum(nums[:2])
+
+# test
+if __name__ == "__main__":
+    sum2([1, 2, 3]) == 3
+    sum2([1, 1]) == 2
+    sum2([1, 1, 1, 1]) == 2
+    sum2([1, 2]) == 3
+    sum2([1]) == 1	1
+    sum2([]) == 0	0
+    sum2([4, 5, 6]) == 9
+    sum2([4]) == 4
